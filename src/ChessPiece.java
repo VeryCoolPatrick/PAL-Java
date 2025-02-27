@@ -1,7 +1,7 @@
 public class ChessPiece {
     private int x;
     private int y;
-    private String colour;
+    private Colour colour;
 
     public int getX() { return x; }
     public int getY() { return y; }
@@ -21,7 +21,7 @@ public class ChessPiece {
         return false;
     }
 
-    public ChessPiece(int startingX, int startingY, String pieceColour) {
+    public ChessPiece(int startingX, int startingY, Colour pieceColour) {
         x = startingX;
         y = startingY;
         colour = pieceColour;
