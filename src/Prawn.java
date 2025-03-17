@@ -10,4 +10,5 @@ public class Prawn extends ChessPiece {
         if(newY != getY() + 1) return false;
         return true;
     }
+
 }

@@ -1,15 +1,22 @@
+import javax.lang.model.element.NestingKind;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-//        System.out.println(Constants.BOARD_WIDTH);
-//
-
-
 
         ChessPiece myPawn = new Pawn(0, 0, Colour.WHITE);
         ChessPiece myPrawn = new Prawn(0, 0, Colour.WHITE);
         myPawn.move(1, 1);
         myPrawn.move(1, 1);
 
+        if(myPawn instanceof SpecialMover) {
+            ((SpecialMover) myPawn).specialMove(0, 2);
+        }
+
+        if(myPrawn instanceof SpecialMover) {
+            ((SpecialMover) myPrawn).specialMove(0, 2);
+        }
 
 //        Colour patricksFavourite = Colour.BLACK;
 //
