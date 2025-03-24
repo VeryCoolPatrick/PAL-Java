@@ -6,10 +6,10 @@ public class Pawn extends ChessPiece implements SpecialMover {
         super(startingX, startingY, pieceColour);
     }
 
-    @Override public boolean checkMove(int newX, int newY) {
-        if(newX != super.getX()) return false;
-        if(newY != super.getY() + 1) return false;
-        if(newY >= Constants.BOARD_WIDTH) return false;
+    @Override public boolean checkMove(int newX, int newY) throws Exception {
+        if(newX != super.getX()) throw new MoveException("Illegal Move");
+        if(newY != super.getY() + 1) throw new MoveException("Illegal Move");
+        if(newY >= Constants.BOARD_WIDTH) throw new MoveException("Illegal Move");
         return true;
     }
 
